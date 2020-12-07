@@ -10,6 +10,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
+from dotenv import load_dotenv
+load_dotenv()
+
 desired_cap = {
     "deviceName": "2e18809a",
     "platformName": "Android",

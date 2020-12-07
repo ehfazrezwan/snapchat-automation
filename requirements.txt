@@ -1,4 +1,4 @@
-Appium-Python-Client==0.50
+Appium-Python-Client==1.0.2
 astroid==2.3.3
 isort==4.3.21
 lazy-object-proxy==1.4.3

@@ -40,8 +40,10 @@ except:
     if login_button.text == "Log In":
         login_button.click()
 
-driver.find_element_by_xpath(selectors['username']).send_keys("ehfazr")
-driver.find_element_by_xpath(selectors['password']).send_keys("Chromagame3@")
+driver.find_element_by_xpath(
+    selectors['username']).send_keys(os.getenv('username'))
+driver.find_element_by_xpath(
+    selectors['password']).send_keys(os.getenv('password'))
 driver.hide_keyboard()
 driver.find_element_by_xpath(selectors['submit_pwd']).click()
 
@@ -81,7 +83,8 @@ bool_check = False
 
 while not bool_check:
     try:
-        driver.find_element_by_xpath(selectors['chat_input']).send_keys("Hello")
+        driver.find_element_by_xpath(
+            selectors['chat_input']).send_keys("Hello")
         driver.press_keycode(66)
         bool_check = True
     except:
